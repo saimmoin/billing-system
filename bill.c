@@ -8,6 +8,7 @@
 #define RED "\033[31m"
 #define GREEN "\033[32m"
 #define RESET "\033[0m"
+#define HIGHLIGHT "\033[47m\033[30m"
 
 struct Product
 {
@@ -791,7 +792,7 @@ int main()
     while (1)
     {
         printf("---------------------------------------------\n");
-        printf("Welcome to the Product Management System\n");
+        printf(HIGHLIGHT "Welcome to the Product Management System\n" RESET);
         printf("---------------------------------------------\n");
         printf("1. Register\n");
         printf("2. Login\n");
@@ -813,7 +814,7 @@ int main()
                     do
                     {
                         printf("---------------------------------\n");
-                        printf("Admin Panel\n");
+                        printf(HIGHLIGHT "Admin Panel\n" RESET);
                         printf("---------------------------------\n");
                         printf("1. Add Product\n");
                         printf("2. Update Product\n");
@@ -923,7 +924,7 @@ int main()
                     do
                     {
                         printf("---------------------------------\n");
-                        printf("User Menu\n");
+                        printf(HIGHLIGHT "User Menu\n" RESET);
                         printf("---------------------------------\n");
                         printf("1. Find Product By ID\n");
                         printf("2. Generate Bill\n");
